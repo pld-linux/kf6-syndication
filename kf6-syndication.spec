@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.17
+%define		kdeframever	6.18
 %define		qtver		5.15.2
 %define		kfname		syndication
 
 Summary:	syndication
 Name:		kf6-%{kfname}
-Version:	6.17.0
+Version:	6.18.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	eefe9fd856c0d90c8e70c36cf8d71b0b
+# Source0-md5:	43f87065b8d43ed84b937b1c43851d7f
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Network-devel >= %{qtver}
@@ -29,6 +29,7 @@ Requires:	Qt6Core >= %{qtver}
 Requires:	Qt6Xml >= %{qtver}
 Requires:	kf6-dirs
 #Obsoletes:	kf5-%{kfname} < %{version}
+%requires_eq_to Qt6Core Qt6Core-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		qt6dir		%{_libdir}/qt6
