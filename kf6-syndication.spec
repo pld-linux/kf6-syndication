@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.18
+%define		kdeframever	6.19
 %define		qtver		5.15.2
 %define		kfname		syndication
 
 Summary:	syndication
 Name:		kf6-%{kfname}
-Version:	6.18.0
+Version:	6.19.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	43f87065b8d43ed84b937b1c43851d7f
+# Source0-md5:	4bcbbe746cd43a842151c94bfb4886ea
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Network-devel >= %{qtver}
@@ -81,7 +81,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.md
 %{_datadir}/qlogging-categories6/syndication.categories
 %ghost %{_libdir}/libKF6Syndication.so.6
-%attr(755,root,root) %{_libdir}/libKF6Syndication.so.*.*
+%{_libdir}/libKF6Syndication.so.*.*
 %{_datadir}/qlogging-categories6/syndication.renamecategories
 
 %files devel
