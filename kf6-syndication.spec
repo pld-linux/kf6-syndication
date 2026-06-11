@@ -37,6 +37,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 An RSS/Atom parser library.
 
+%description -l pl.UTF-8
+Bilioteka parsera RSS/Atom.
+
 %package devel
 Summary:	Header files for %{kfname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kfname}
